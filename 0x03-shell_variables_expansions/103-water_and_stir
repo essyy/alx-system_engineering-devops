@@ -1,3 +1,2 @@
 #!/bin/bash
-result=$(echo "obase=10;ibase=water;$WATER+ibase=stir;$STIR" | dc); printf "%x\n" $result > $BESTCHOL
-
+printf "%o\n" $(( $((5#$(echo $WATER | tr water 01234))) + $((5#$(echo $STIR | tr stir. 01234))) )) | tr 01234567 behlnort
